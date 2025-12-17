@@ -1,7 +1,8 @@
-import { useQuery } from "@apollo/client"
+import { useQuery } from "@apollo/client/react"
 import { GET_EPISODES } from "@/graphql/queries"
 import { EpisodeProps } from "@/interfaces"
 import EpisodeCard from "@/components/common/EpisodeCard"
+import ErrorProneComponent from "@/components/ErrorProneComponent"
 import { useEffect, useState } from "react"
 
 
@@ -27,6 +28,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#A3D5E0] to-[#F4F4F4] text-gray-800">
+      {/* <ErrorProneComponent enabled={true} /> */}
       {/* Header */}
       <header className="bg-[#4CA1AF] text-white py-6 text-center shadow-md">
         <h1 className="text-4xl font-bold tracking-wide">Rick and Morty Episodes</h1>
@@ -66,6 +68,7 @@ const Home: React.FC = () => {
       <footer className="bg-[#4CA1AF] text-white py-4 text-center shadow-md">
         <p>&copy; 2024 Rick and Morty Fan Page</p>
       </footer>
+
     </div>
   )
 }
